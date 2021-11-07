@@ -1,18 +1,18 @@
 """
 https://judge.yosupo.jp/problem/unionfind
 """
-
 # region template
 import sys
 import typing
+from typing import Callable, Dict, List, Set, Tuple
 
 sys.setrecursionlimit(10 ** 6)
-Vec = typing.List[int]  # noqa:F841
-VecVec = typing.List[Vec]  # noqa:F841
-sinput: typing.Callable[..., str] = sys.stdin.readline  # noqa:F841
-MOD: int = 1000000007  # noqa:F841
-INF: float = float("Inf")  # noqa:F841
-IINF: int = 4611686018427387903  # noqa:F841
+Vec = List[int]
+VecVec = List[Vec]
+sinput: Callable[..., str] = sys.stdin.readline
+MOD: int = 1000000007
+INF: float = float("Inf")
+IINF: int = sys.maxsize
 # endregion
 
 
@@ -51,18 +51,18 @@ class UnionFindTree:
 
         return True
 
-    def same(self, a: int, b: int):
+    def same(self, a: int, b: int) -> bool:
         return self.find(a) == self.find(b)
 
     def size(self, a: int) -> int:
         return -self.parent[self.find(a)]
 
-    def group(self):
+    def group(self) -> Dict[int, List[int]]:
         from collections import defaultdict
 
-        res = defaultdict(set)
+        res = defaultdict(list)
         for i in range(self.n):
-            res[self.find(i)].add(i)
+            res[self.find(i)].append(i)
 
         return dict(res)
 
