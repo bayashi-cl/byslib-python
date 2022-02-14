@@ -1,15 +1,7 @@
-import functools
 import sys
-import typing
-from typing import Callable, Dict, List, Set, Tuple
 
-
-sys.setrecursionlimit(10 ** 6)
-sinput: Callable[..., str] = sys.stdin.readline
-debug = functools.partial(print, file=sys.stderr)
-MOD: int = 998244353
-INF: float = float("Inf")
-IINF: int = sys.maxsize // 2
+from byslib.core.const import IINF, INF, MOD, MOD7
+from byslib.core.io import debug, int1, sinput
 
 
 def main() -> None:
@@ -17,4 +9,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    sys.setrecursionlimit(10 ** 6)
     main()
