@@ -1,19 +1,4 @@
-"""
-https://judge.yosupo.jp/problem/unionfind
-"""
-# region template
-import sys
-import typing
-from typing import Callable, Dict, List, Set, Tuple
-
-sys.setrecursionlimit(10 ** 6)
-Vec = List[int]
-VecVec = List[Vec]
-sinput: Callable[..., str] = sys.stdin.readline
-MOD: int = 1000000007
-INF: float = float("Inf")
-IINF: int = sys.maxsize
-# endregion
+from typing import List, Dict
 
 
 class UnionFindTree:
@@ -58,29 +43,12 @@ class UnionFindTree:
         return -self.parent[self.find(a)]
 
     def group(self) -> Dict[int, List[int]]:
-        from collections import defaultdict
-
-        res = defaultdict(list)
+        res: Dict[int, List[int]] = dict()
         for i in range(self.n):
-            res[self.find(i)].append(i)
-
-        return dict(res)
-
-
-def main() -> None:
-    n, q = map(int, sinput().split())
-    uft = UnionFindTree(n)
-
-    for _ in range(q):
-        t, u, v = map(int, sinput().split())
-        if t == 0:
-            uft.union(u, v)
-        else:
-            if uft.same(u, v):
-                print(1)
+            leader = self.find(i)
+            if leader in res:
+                res[leader].append(i)
             else:
-                print(0)
+                res[leader] = [i]
 
-
-if __name__ == "__main__":
-    main()
+        return res

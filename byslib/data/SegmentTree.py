@@ -1,6 +1,3 @@
-"""
-https://atcoder.jp/contests/typical90/tasks/typical90_ac
-"""
 import typing
 
 
@@ -148,34 +145,3 @@ class LazySegmentTree(SegmentTree):
             l >>= 1
             r >>= 1
         return res
-
-
-def main() -> None:
-    import sys
-
-    sinput = sys.stdin.readline
-    w, n = map(int, sinput().split())
-    brick_ = list(map(int, sys.stdin.read().split()))
-
-    # compress
-    cp = sorted(list(set(brick_)))
-    cp_dict = dict()
-    for i, c in enumerate(cp):
-        cp_dict[c] = i
-    for i in range(n * 2):
-        brick_[i] = cp_dict[brick_[i]]
-    brick = [(brick_[2 * i], brick_[2 * i + 1]) for i in range(n)]
-    w = cp[-1]
-
-    st = LazySegmentTree([0] * w, max)
-    ans = [0.0] * n
-    for i in range(n):
-        left, right = brick[i]
-        height = st.query(left, right + 1)
-        st.update(left, right + 1, height + 1)
-        ans[i] = height + 1
-    print("\n".join(map(str, ans)))
-
-
-if __name__ == "__main__":
-    main()
