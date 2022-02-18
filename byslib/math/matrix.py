@@ -24,9 +24,3 @@ class Vector(UserList, Generic[_T]):
 
 class Matrix:
     ...
-
-
-if __name__ == "__main__":
-    v = Vector(range(3))
-    v += v + v
-    print(v)

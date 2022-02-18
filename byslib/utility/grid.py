@@ -48,9 +48,3 @@ class Grid:
                     continue
                 d.append((di, dj))
         return self.delta(i, j, d)
-
-
-if __name__ == "__main__":
-    g = Grid(3, 5)
-    for ni, nj in g.delta8(5, 2):
-        print(ni, nj)

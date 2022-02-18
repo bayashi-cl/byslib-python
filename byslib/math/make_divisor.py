@@ -28,7 +28,3 @@ def prime_factorize(n: int) -> typing.List[int]:
     if n != 1:
         res.append(n)
     return res
-
-
-if __name__ == "__main__":
-    print(len(make_divisors(2 ** 4 * 3 ** 4 * 5 ** 2)))

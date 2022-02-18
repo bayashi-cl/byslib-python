@@ -1,16 +1,4 @@
-# region template
-import sys
-import typing
-from typing import Callable, Dict, List, Set, Tuple
-
-sys.setrecursionlimit(10 ** 6)
-Vec = List[int]
-VecVec = List[Vec]
-sinput: Callable[..., str] = sys.stdin.readline
-MOD: int = 1000000007
-INF: float = float("Inf")
-IINF: int = sys.maxsize
-# endregion
+from typing import Callable
 
 
 def meguru_bisect(ok: int, ng: int, is_ok: Callable[..., bool], *args) -> int:
@@ -34,13 +22,3 @@ def meguru_bisect(ok: int, ng: int, is_ok: Callable[..., bool], *args) -> int:
         else:
             ng = mid
     return ok
-
-
-def main() -> None:
-    """https://atcoder.jp/contests/abc206/tasks/abc206_b"""
-    n = int(sinput())
-    print(meguru_bisect(10 ** 9, 0, lambda x: x * (x + 1) // 2 >= n))
-
-
-if __name__ == "__main__":
-    main()

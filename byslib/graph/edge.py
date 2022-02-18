@@ -1,35 +1,49 @@
-from dataclasses import dataclass
-import typing
+from typing import List, Tuple
 
 
-@dataclass
 class Edge:
-    arr: int
+    src: int
+    dest: int
+    weight: int
+
+    def __init__(self, src: int, dest: int, weight: int = 1) -> None:
+        self.src = src
+        self.dest = dest
+        self.weight = weight
+
+    def __repr__(self) -> str:
+        return f"{{{self.src} -> {self.dest}: {self.weight}}}"
 
 
-@dataclass
-class WEdge(Edge):
-    arr: int
-    cost: int
+class AdjacencyList:
+    n_node: int
+    n_edge: int
+    buf: List[Edge]
+    data: List[Edge]
+    index: List[int]
 
+    def __init__(self, n_node: int, n_edge: int) -> None:
+        self.n_node = n_node
+        self.n_edge = n_edge
+        self.index = [0] * (n_node + 1)
+        self.data = [Edge(-1, -1)] * n_edge
+        self.buf = []
 
-@dataclass
-class DeWEdge(WEdge):
-    dep: int
-    arr: int
-    cost: int
+    def __len__(self) -> int:
+        return self.n_node
 
-    def __lt__(self, rh: "DeWEdge") -> bool:
-        if self.cost is None or rh.cost is None:
-            raise ValueError
-        return self.cost < rh.cost
+    def __getitem__(self, key: int) -> List[Edge]:
+        return self.data[self.index[key] : self.index[key + 1]]
 
+    def add_edge(self, src: int, dest: int, weight: int = 1) -> None:
+        self.index[src] += 1
+        self.buf.append(Edge(src, dest, weight))
+        if len(self.buf) == self.n_edge:
+            self.build()
 
-if __name__ == "__main__":
-    print(Edge(4))
-    e = []
-    e.append(DeWEdge(3, 1, 4))
-    e.append(DeWEdge(1, 5, 1))
-    print(e)
-    e.sort()
-    print(e)
+    def build(self) -> None:
+        for i in range(1, self.n_node + 1):
+            self.index[i] += self.index[i - 1]
+        for e in self.buf:
+            self.index[e.src] -= 1
+            self.data[self.index[e.src]] = e
