@@ -6,6 +6,7 @@ class UnionFindTree:
 
     def __init__(self, n: int) -> None:
         self.n = n
+        self.n_tree = n
         self.parent = [-1] * self.n  # 負なら親でありその値は(-子の数)
 
     def find(self, a: int) -> int:
@@ -34,6 +35,7 @@ class UnionFindTree:
         self.parent[root_b] += self.parent[root_a]
         self.parent[root_a] = root_b
 
+        self.n_tree -= 1
         return True
 
     def same(self, a: int, b: int) -> bool:

@@ -1,49 +1,48 @@
-import sys
-import typing
 from collections import deque
+from typing import Deque
 
-from edge import DeWEdge, Edge, WEdge
+from ..core.const import IINF
+from .edge import AdjacencyList
+from .utility import SSSPResult
 
-T = typing.TypeVar("T", Edge, WEdge, DeWEdge)
-Adj = typing.List[typing.List[T]]
+
+def breadth_first_search(graph: AdjacencyList, source: int) -> SSSPResult:
+    n = len(graph)
+    prev = [-1] * n
+    cost = [IINF] * n
+    cost[source] = 0
+    que: Deque[int] = deque()
+    que.append(source)
+    while que:
+        top = que.popleft()
+        for nxt in graph[top]:
+            if cost[nxt.dest] == IINF:
+                cost[nxt.dest] = cost[top] + 1
+                prev[nxt.dest] = top
+                que.append(nxt.dest)
+
+    return cost, prev
 
 
-class BreadthFirstSearch(typing.Generic[T]):
-    INF = sys.maxsize // 2
-    graph: Adj[T]
-    n_node: int
-    cost: typing.List[int]
-    prev: typing.List[int]
+def zero_one_bfs(graph: AdjacencyList, source: int, one: int = 1) -> SSSPResult:
+    n = len(graph)
+    cost = [IINF] * n
+    cost[source] = 0
+    prev = [-1] * n
+    que: Deque[int] = deque()
+    que.append(source)
+    while que:
+        top = que.popleft()
+        for nxt in graph[top]:
+            nxt_cost = cost[top] + nxt.weight
+            if nxt_cost < cost[nxt.dest]:
+                cost[nxt.dest] = nxt_cost
+                prev[nxt.dest] = top
+                if nxt.weight == 0:
+                    que.appendleft(nxt.dest)
+                elif nxt.weight == one:
+                    que.append(nxt.dest)
+                else:
+                    raise ValueError
 
-    def __init__(self, graph: Adj[T], start: int = 0, err_val: int = -1) -> None:
-        self.graph = graph
-        self.n_node = len(graph)
-        if start < 0 or self.n_node <= start:
-            raise ValueError("start is out of graph")
-        self.cost = [self.INF] * self.n_node
-        self.cost = [-1] * self.n_node
-        self.search(start)
-        for i in range(self.n_node):
-            if self.cost[i] == self.INF:
-                self.cost[i] = err_val
-
-    def search(self, start: int) -> None:
-        que: typing.Deque[int] = deque()
-        que.append(start)
-        self.cost[start] = 0
-        while que:
-            now = que.popleft()
-            for to in self.graph[now]:
-                if self.cost[to.arr] == self.INF:
-                    self.cost[to.arr] = self.cost[now] + 1
-                    self.prev[to.arr] = now
-                    que.append(to.arr)
-
-    def path(self, to: int) -> typing.List[int]:
-        if to < 0 or self.n_node <= to:
-            raise ValueError("to is out of graph")
-        res = []
-        while to != -1:
-            res.append(to)
-            to = self.prev[to]
-        return res[::-1]
+    return cost, prev

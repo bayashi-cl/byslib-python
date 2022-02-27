@@ -2,23 +2,23 @@ import heapq
 from typing import List, Tuple
 
 from .edge import AdjacencyList
-from .result import SSSPResult
+from ..core.const import IINF
 
 
-def dijkstra(graph: AdjacencyList, source: int) -> SSSPResult:
+def dijkstra(graph: AdjacencyList, source: int) -> Tuple[List[int], List[int]]:
     n = len(graph)
-    res = SSSPResult(n, source)
-    res.cost[source] = 0
-    que: List[Tuple[int, int]] = []
-    heapq.heappush(que, (0, source))
+    cost = [IINF] * n
+    cost[source] = 0
+    prev = [-1] * n
+    que: List[Tuple[int, int]] = [(0, source)]
     while que:
         top_cost, top = heapq.heappop(que)
-        if res.cost[top] < top_cost:
+        if cost[top] < top_cost:
             continue
         for nxt in graph[top]:
-            nxt_cost = res.cost[top] + nxt.weight
-            if nxt_cost < res.cost[nxt.dest]:
-                res.cost[nxt.dest] = nxt_cost
-                res.prev[nxt.dest] = top
+            nxt_cost = cost[top] + nxt.weight
+            if nxt_cost < cost[nxt.dest]:
+                cost[nxt.dest] = nxt_cost
+                prev[nxt.dest] = top
                 heapq.heappush(que, (nxt_cost, nxt.dest))
-    return res
+    return cost, prev

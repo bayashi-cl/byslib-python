@@ -4,7 +4,7 @@ class MultiComb:
     **comb: O(1)**
     """
 
-    def __init__(self, n: int, mod: int = 10 ** 9 + 7) -> None:
+    def __init__(self, n: int, mod: int = 10**9 + 7) -> None:
         self.n = n
         self.mod = mod
         self.fact = [1, 1]
@@ -22,9 +22,9 @@ class MultiComb:
         return self.fact[n] * self.factinv[r] * self.factinv[n - r] % self.mod
 
 
-def mono_comb(n: int, r: int, mod: int = 10 ** 9 + 7) -> int:
+def mono_comb(n: int, r: int, mod: int = 10**9 + 7) -> int:
     """二項係数
-    **O(r)**
+    **O(min(r, n-r))**
     python3.8 or later
     """
     r = min(r, n - r)
