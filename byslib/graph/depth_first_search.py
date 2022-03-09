@@ -11,7 +11,7 @@ class DepthFirstSearch:
         self.graph = graph
         self.prev = [-1] * self.n
 
-    def pre_order(self, start: int) -> Generator[int, int, None]:
+    def pre_order(self, start: int) -> Generator[int, None, None]:
         self.cost = [-1] * self.n
         self.cost[start] = 0
         que = [start]
@@ -26,7 +26,7 @@ class DepthFirstSearch:
                     self.prev[nxt.dest] = now
                     que.append(nxt.dest)
 
-    def post_order(self, start: int) -> Generator[int, int, None]:
+    def post_order(self, start: int) -> Generator[int, None, None]:
         self.cost = [-1] * self.n
         self.cost[start] = 0
         que = [~start, start]
