@@ -29,9 +29,9 @@ data:
     \    for _ in range(t):\n        a, b = map(int, readline().split())\n       \
     \ print(a + b)\n\n\nif __name__ == \"__main__\":\n    main()\n"
   dependsOn:
-  - byslib/__init__.py
-  - byslib/core/io.py
   - byslib/core/__init__.py
+  - byslib/core/io.py
+  - byslib/__init__.py
   isVerificationFile: true
   path: tests/io.test.py
   requiredBy: []

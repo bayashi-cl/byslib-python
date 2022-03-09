@@ -43,12 +43,12 @@ data:
     \      else:\n            print(seg.query(s, t))\n\n\nif __name__ == \"__main__\"\
     :\n    sys.setrecursionlimit(10**6)\n    main()\n"
   dependsOn:
-  - byslib/core/io.py
   - byslib/data/__init__.py
+  - byslib/__init__.py
   - byslib/core/const.py
   - byslib/data/segment_tree.py
-  - byslib/__init__.py
   - byslib/core/__init__.py
+  - byslib/core/io.py
   isVerificationFile: true
   path: tests/segment_tree.test.py
   requiredBy: []

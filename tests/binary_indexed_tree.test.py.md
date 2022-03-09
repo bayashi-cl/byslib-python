@@ -43,12 +43,12 @@ data:
     \  l, r = que\n            print(bit.range_sum(l, r))\n\n\nif __name__ == \"__main__\"\
     :\n    sys.setrecursionlimit(10**6)\n    main()\n"
   dependsOn:
-  - byslib/core/io.py
   - byslib/data/__init__.py
-  - byslib/core/const.py
   - byslib/__init__.py
+  - byslib/core/const.py
   - byslib/data/binary_indexed_tree.py
   - byslib/core/__init__.py
+  - byslib/core/io.py
   isVerificationFile: true
   path: tests/binary_indexed_tree.test.py
   requiredBy: []

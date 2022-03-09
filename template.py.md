@@ -29,10 +29,10 @@ data:
     \ import debug, readline, sinput\n\n\ndef main() -> None:\n    ...\n\n\nif __name__\
     \ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n    main()\n"
   dependsOn:
-  - byslib/core/io.py
-  - byslib/core/const.py
   - byslib/__init__.py
+  - byslib/core/const.py
   - byslib/core/__init__.py
+  - byslib/core/io.py
   isVerificationFile: false
   path: template.py
   requiredBy: []

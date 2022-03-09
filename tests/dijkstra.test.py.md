@@ -53,15 +53,15 @@ data:
     \ y)\n        for i in range(y):\n            print(path[i], path[i + 1])\n\n\n\
     if __name__ == \"__main__\":\n    main()\n"
   dependsOn:
-  - byslib/core/io.py
-  - byslib/graph/dijkstra.py
-  - byslib/graph/utility.py
-  - byslib/graph/depth_first_search.py
-  - byslib/core/const.py
-  - byslib/graph/__init__.py
   - byslib/__init__.py
   - byslib/graph/edge.py
+  - byslib/core/const.py
+  - byslib/graph/dijkstra.py
+  - byslib/graph/__init__.py
+  - byslib/graph/utility.py
   - byslib/core/__init__.py
+  - byslib/core/io.py
+  - byslib/graph/depth_first_search.py
   isVerificationFile: true
   path: tests/dijkstra.test.py
   requiredBy: []

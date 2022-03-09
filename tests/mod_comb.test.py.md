@@ -44,12 +44,12 @@ data:
     \ ValueError\n\n\nif __name__ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n\
     \    main()\n"
   dependsOn:
-  - byslib/core/io.py
-  - byslib/math/mod_comb.py
   - byslib/math/__init__.py
-  - byslib/core/const.py
   - byslib/__init__.py
+  - byslib/math/mod_comb.py
+  - byslib/core/const.py
   - byslib/core/__init__.py
+  - byslib/core/io.py
   isVerificationFile: true
   path: tests/mod_comb.test.py
   requiredBy: []

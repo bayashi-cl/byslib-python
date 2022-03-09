@@ -47,12 +47,12 @@ data:
     \ t + 1))\n\n\nif __name__ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n\
     \    main()\n"
   dependsOn:
-  - byslib/core/io.py
   - byslib/data/__init__.py
-  - byslib/core/const.py
   - byslib/__init__.py
   - byslib/data/lazy_segment_tree.py
+  - byslib/core/const.py
   - byslib/core/__init__.py
+  - byslib/core/io.py
   isVerificationFile: true
   path: tests/lazysegtree/range_update_query.test.py
   requiredBy: []

@@ -43,11 +43,11 @@ data:
     \    main()\n"
   dependsOn:
   - byslib/data/cumulative_sum.py
-  - byslib/core/io.py
   - byslib/data/__init__.py
-  - byslib/core/const.py
   - byslib/__init__.py
+  - byslib/core/const.py
   - byslib/core/__init__.py
+  - byslib/core/io.py
   isVerificationFile: true
   path: tests/cumulative_sum.test.py
   requiredBy: []

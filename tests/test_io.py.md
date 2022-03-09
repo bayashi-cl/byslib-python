@@ -25,9 +25,9 @@ data:
   code: "from byslib.core.io import int1\n\n\ndef test_sinput_int1():\n    assert\
     \ int1(\"5\") == 4\n"
   dependsOn:
-  - byslib/__init__.py
-  - byslib/core/io.py
   - byslib/core/__init__.py
+  - byslib/core/io.py
+  - byslib/__init__.py
   isVerificationFile: false
   path: tests/test_io.py
   requiredBy: []
