@@ -16,10 +16,20 @@ class MultiComb:
             self.factinv.append((self.factinv[-1] * self.inv[-1]) % self.mod)
 
     def comb(self, n: int, r: int) -> int:
-        if (r < 0) or (n < r):
+        if r < 0 or n < r:
             return 0
         r = min(r, n - r)
         return self.fact[n] * self.factinv[r] * self.factinv[n - r] % self.mod
+
+    def perm(self, n: int, r: int) -> int:
+        if r < 0 or n < r:
+            return 0
+        return self.fact[n] * self.factinv[n - r] % self.mod
+
+    def hom(self, n: int, r: int) -> int:
+        if n == r == 0:
+            return 1
+        return self.comb(n + r - 1, r)
 
 
 def mono_comb(n: int, r: int, mod: int = 10**9 + 7) -> int:
