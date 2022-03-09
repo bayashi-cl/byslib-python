@@ -39,7 +39,8 @@ data:
     - https://judge.yosupo.jp/problem/shortest_path
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
+    \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/shortest_path\n\
     from byslib.core.io import sinput\nfrom byslib.core.const import IINF\nfrom byslib.graph.edge\
@@ -52,19 +53,19 @@ data:
     \ y)\n        for i in range(y):\n            print(path[i], path[i + 1])\n\n\n\
     if __name__ == \"__main__\":\n    main()\n"
   dependsOn:
-  - byslib/core/__init__.py
-  - byslib/graph/dijkstra.py
-  - byslib/graph/edge.py
-  - byslib/graph/utility.py
-  - byslib/__init__.py
-  - byslib/graph/__init__.py
-  - byslib/core/const.py
-  - byslib/graph/depth_first_search.py
   - byslib/core/io.py
+  - byslib/graph/dijkstra.py
+  - byslib/graph/utility.py
+  - byslib/graph/depth_first_search.py
+  - byslib/core/const.py
+  - byslib/graph/__init__.py
+  - byslib/__init__.py
+  - byslib/graph/edge.py
+  - byslib/core/__init__.py
   isVerificationFile: true
   path: tests/dijkstra.test.py
   requiredBy: []
-  timestamp: '2022-02-28 04:59:03+09:00'
+  timestamp: '2022-03-10 05:05:05+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/dijkstra.test.py

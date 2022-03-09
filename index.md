@@ -17,18 +17,21 @@ data:
     - icon: ':heavy_check_mark:'
       path: byslib/core/io.py
       title: byslib/core/io.py
+    - icon: ':warning:'
+      path: byslib/core/pypyconf.py
+      title: byslib/core/pypyconf.py
   - name: byslib/data
     pages:
     - icon: ':heavy_check_mark:'
       path: byslib/data/__init__.py
       title: byslib/data/__init__.py
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: byslib/data/binary_indexed_tree.py
       title: byslib/data/binary_indexed_tree.py
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: byslib/data/cumulative_sum.py
       title: byslib/data/cumulative_sum.py
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: byslib/data/lazy_segment_tree.py
       title: byslib/data/lazy_segment_tree.py
     - icon: ':heavy_check_mark:'
@@ -76,7 +79,7 @@ data:
       title: byslib/graph/warshall_floyd.py
   - name: byslib/math
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: byslib/math/__init__.py
       title: byslib/math/__init__.py
     - icon: ':warning:'
@@ -85,7 +88,7 @@ data:
     - icon: ':warning:'
       path: byslib/math/matrix.py
       title: byslib/math/matrix.py
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: byslib/math/mod_comb.py
       title: byslib/math/mod_comb.py
     - icon: ':warning:'
@@ -128,6 +131,12 @@ data:
   - name: tests
     pages:
     - icon: ':heavy_check_mark:'
+      path: tests/binary_indexed_tree.test.py
+      title: tests/binary_indexed_tree.test.py
+    - icon: ':heavy_check_mark:'
+      path: tests/cumulative_sum.test.py
+      title: tests/cumulative_sum.test.py
+    - icon: ':heavy_check_mark:'
       path: tests/dijkstra.test.py
       title: tests/dijkstra.test.py
     - icon: ':heavy_check_mark:'
@@ -137,10 +146,22 @@ data:
       path: tests/kruskal.test.py
       title: tests/kruskal.test.py
     - icon: ':heavy_check_mark:'
+      path: tests/mod_comb.test.py
+      title: tests/mod_comb.test.py
+    - icon: ':heavy_check_mark:'
       path: tests/segment_tree.test.py
       title: tests/segment_tree.test.py
     - icon: ':heavy_check_mark:'
       path: tests/union_find.test.py
       title: tests/union_find.test.py
+  - name: tests/lazysegtree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/lazysegtree/range_update_query.test.py
+      title: tests/lazysegtree/range_update_query.test.py
 layout: toppage
 ---
+[![Badge](https://cp-logo.vercel.app/atcoder/bayashi_cl)](https://atcoder.jp/users/bayashi_cl)
+[![Badge](https://cp-logo.vercel.app/codeforces/bayashi_cl)](https://codeforces.com/profile/bayashi_cl)
+
+[C++版](https://bayashi-cl.github.io/byslib/)

@@ -21,7 +21,8 @@ data:
     - https://judge.yosupo.jp/problem/unionfind
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
+    \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/unionfind\n\
     import sys\nfrom typing import Callable\n\nfrom byslib.data.union_find import\
@@ -32,9 +33,9 @@ data:
     \ else:\n            print(1 if uft.same(u, v) else 0)\n\n\nif __name__ == \"\
     __main__\":\n    main()\n"
   dependsOn:
-  - byslib/data/__init__.py
   - byslib/__init__.py
   - byslib/data/union_find.py
+  - byslib/data/__init__.py
   isVerificationFile: true
   path: tests/union_find.test.py
   requiredBy: []

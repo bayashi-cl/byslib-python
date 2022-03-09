@@ -19,14 +19,15 @@ data:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
+    \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from byslib.core.io import int1\n\n\ndef test_sinput_int1():\n    assert\
     \ int1(\"5\") == 4\n"
   dependsOn:
-  - byslib/core/__init__.py
   - byslib/__init__.py
   - byslib/core/io.py
+  - byslib/core/__init__.py
   isVerificationFile: false
   path: tests/test_io.py
   requiredBy: []

@@ -14,51 +14,52 @@ data:
     path: byslib/core/io.py
     title: byslib/core/io.py
   - icon: ':heavy_check_mark:'
-    path: byslib/data/__init__.py
-    title: byslib/data/__init__.py
+    path: byslib/math/__init__.py
+    title: byslib/math/__init__.py
   - icon: ':heavy_check_mark:'
-    path: byslib/data/segment_tree.py
-    title: byslib/data/segment_tree.py
+    path: byslib/math/mod_comb.py
+    title: byslib/math/mod_comb.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
+    PROBLEM: https://yukicoder.me/problems/no/117
     links:
-    - https://judge.yosupo.jp/problem/point_add_range_sum
+    - https://yukicoder.me/problems/no/117
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_add_range_sum\n\
-    import sys\nfrom operator import add\n\nfrom byslib.core.const import IINF, MOD\n\
-    from byslib.core.io import debug, readline, sinput\nfrom byslib.data.segment_tree\
-    \ import SegmentTree\n\n\ndef main() -> None:\n    _, q = map(int, readline().split())\n\
-    \    a = list(map(int, readline().split()))\n    seg = SegmentTree(add, 0, a)\n\
-    \    for _ in range(q):\n        c, s, t = map(int, sinput().split())\n      \
-    \  if c == 0:\n            ap = seg[s]\n            seg.update(s, ap + t)\n  \
-    \      else:\n            print(seg.query(s, t))\n\n\nif __name__ == \"__main__\"\
-    :\n    sys.setrecursionlimit(10**6)\n    main()\n"
+  code: "# verification-helper: PROBLEM https://yukicoder.me/problems/no/117\nimport\
+    \ sys\n\nfrom byslib.core.const import IINF, MOD\nfrom byslib.core.io import debug,\
+    \ readline, sinput\nfrom byslib.math.mod_comb import MultiComb\n\n\ndef main()\
+    \ -> None:\n    t = int(readline())\n    mc = MultiComb(2_000_000)\n\n    for\
+    \ _ in range(t):\n        s = sinput()\n        com = s[0]\n        n, k = map(int,\
+    \ s[2:-1].split(\",\"))\n        if com == \"C\":\n            print(mc.comb(n,\
+    \ k))\n        elif com == \"P\":\n            print(mc.perm(n, k))\n        elif\
+    \ com == \"H\":\n            print(mc.hom(n, k))\n        else:\n            raise\
+    \ ValueError\n\n\nif __name__ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n\
+    \    main()\n"
   dependsOn:
   - byslib/core/io.py
-  - byslib/data/__init__.py
+  - byslib/math/mod_comb.py
+  - byslib/math/__init__.py
   - byslib/core/const.py
-  - byslib/data/segment_tree.py
   - byslib/__init__.py
   - byslib/core/__init__.py
   isVerificationFile: true
-  path: tests/segment_tree.test.py
+  path: tests/mod_comb.test.py
   requiredBy: []
-  timestamp: '2022-03-10 05:04:56+09:00'
+  timestamp: '2022-03-10 05:05:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/segment_tree.test.py
+documentation_of: tests/mod_comb.test.py
 layout: document
 redirect_from:
-- /verify/tests/segment_tree.test.py
-- /verify/tests/segment_tree.test.py.html
-title: tests/segment_tree.test.py
+- /verify/tests/mod_comb.test.py
+- /verify/tests/mod_comb.test.py.html
+title: tests/mod_comb.test.py
 ---

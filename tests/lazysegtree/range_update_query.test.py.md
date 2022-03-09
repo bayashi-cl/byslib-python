@@ -17,58 +17,52 @@ data:
     path: byslib/data/__init__.py
     title: byslib/data/__init__.py
   - icon: ':heavy_check_mark:'
-    path: byslib/data/union_find.py
-    title: byslib/data/union_find.py
-  - icon: ':heavy_check_mark:'
-    path: byslib/graph/__init__.py
-    title: byslib/graph/__init__.py
-  - icon: ':heavy_check_mark:'
-    path: byslib/graph/edge.py
-    title: byslib/graph/edge.py
-  - icon: ':heavy_check_mark:'
-    path: byslib/graph/kruskal.py
-    title: byslib/graph/kruskal.py
+    path: byslib/data/lazy_segment_tree.py
+    title: byslib/data/lazy_segment_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_2_A
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F
     links:
-    - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_2_A
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_2_A\n\
+  code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F\n\
     import sys\n\nfrom byslib.core.const import IINF, MOD\nfrom byslib.core.io import\
-    \ debug, sinput, readline\nfrom byslib.graph.edge import Edge\nfrom byslib.graph.kruskal\
-    \ import kruskal\n\n\ndef main() -> None:\n    v, e = map(int, sinput().split())\n\
-    \    edges = [Edge(*map(int, sinput().split())) for _ in range(e)]\n    cost,\
-    \ _ = kruskal(edges, v)\n    print(cost)\n\n\nif __name__ == \"__main__\":\n \
-    \   sys.setrecursionlimit(10**6)\n    main()\n"
+    \ debug, readline, sinput\n\nfrom byslib.data.lazy_segment_tree import LazySegmentTree\n\
+    \n\ndef main() -> None:\n    id_S: int = 2**31 - 1\n    id_F = -1\n\n    def op(a:\
+    \ int, b: int) -> int:\n        return min(a, b)\n\n    def mp(a: int, b: int)\
+    \ -> int:\n        return b if a == -1 else a\n\n    def cp(f: int, g: int) ->\
+    \ int:\n        return g if f == -1 else f\n\n    n, q = map(int, readline().split())\n\
+    \    a = [id_S] * n\n    seg = LazySegmentTree(op, id_S, mp, cp, id_F, a)\n  \
+    \  for _ in range(q):\n        head, *body = map(int, readline().split())\n  \
+    \      if head == 0:\n            s, t, x = body\n            seg.apply(s, t +\
+    \ 1, x)\n        else:\n            s, t = body\n            print(seg.query(s,\
+    \ t + 1))\n\n\nif __name__ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n\
+    \    main()\n"
   dependsOn:
-  - byslib/graph/kruskal.py
   - byslib/core/io.py
-  - byslib/data/union_find.py
   - byslib/data/__init__.py
   - byslib/core/const.py
-  - byslib/graph/__init__.py
   - byslib/__init__.py
-  - byslib/graph/edge.py
+  - byslib/data/lazy_segment_tree.py
   - byslib/core/__init__.py
   isVerificationFile: true
-  path: tests/kruskal.test.py
+  path: tests/lazysegtree/range_update_query.test.py
   requiredBy: []
-  timestamp: '2022-02-28 04:59:03+09:00'
+  timestamp: '2022-03-10 05:04:56+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/kruskal.test.py
+documentation_of: tests/lazysegtree/range_update_query.test.py
 layout: document
 redirect_from:
-- /verify/tests/kruskal.test.py
-- /verify/tests/kruskal.test.py.html
-title: tests/kruskal.test.py
+- /verify/tests/lazysegtree/range_update_query.test.py
+- /verify/tests/lazysegtree/range_update_query.test.py.html
+title: tests/lazysegtree/range_update_query.test.py
 ---
