@@ -1,13 +1,14 @@
-import sys
-
+from byslib.core.config import procon_setup
 from byslib.core.const import IINF, MOD
-from byslib.core.io import debug, readline, sinput
+from byslib.core.fastio import debug, readline, sinput
 
 
-def main() -> None:
+@procon_setup
+def main(**kwargs) -> None:
     ...
 
 
 if __name__ == "__main__":
-    sys.setrecursionlimit(10**6)
-    main()
+    t = 1
+    # t = int(readline())
+    main(t)
