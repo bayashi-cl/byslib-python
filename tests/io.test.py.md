@@ -8,8 +8,8 @@ data:
     path: byslib/core/__init__.py
     title: byslib/core/__init__.py
   - icon: ':heavy_check_mark:'
-    path: byslib/core/io.py
-    title: byslib/core/io.py
+    path: byslib/core/fastio.py
+    title: byslib/core/fastio.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -25,17 +25,17 @@ data:
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/many_aplusb\n\
-    from byslib.core.io import readline\n\n\ndef main() -> None:\n    t = int(readline())\n\
+    from byslib.core.fastio import readline\n\n\ndef main() -> None:\n    t = int(readline())\n\
     \    for _ in range(t):\n        a, b = map(int, readline().split())\n       \
     \ print(a + b)\n\n\nif __name__ == \"__main__\":\n    main()\n"
   dependsOn:
-  - byslib/core/__init__.py
-  - byslib/core/io.py
   - byslib/__init__.py
+  - byslib/core/__init__.py
+  - byslib/core/fastio.py
   isVerificationFile: true
   path: tests/io.test.py
   requiredBy: []
-  timestamp: '2022-02-28 04:59:03+09:00'
+  timestamp: '2022-03-13 15:20:56+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/io.test.py

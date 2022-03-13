@@ -11,12 +11,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: byslib/core/__init__.py
       title: byslib/core/__init__.py
+    - icon: ':warning:'
+      path: byslib/core/config.py
+      title: byslib/core/config.py
     - icon: ':heavy_check_mark:'
       path: byslib/core/const.py
       title: byslib/core/const.py
     - icon: ':heavy_check_mark:'
-      path: byslib/core/io.py
-      title: byslib/core/io.py
+      path: byslib/core/fastio.py
+      title: byslib/core/fastio.py
     - icon: ':warning:'
       path: byslib/core/pypyconf.py
       title: byslib/core/pypyconf.py

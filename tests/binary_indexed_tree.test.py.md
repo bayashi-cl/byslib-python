@@ -11,8 +11,8 @@ data:
     path: byslib/core/const.py
     title: byslib/core/const.py
   - icon: ':heavy_check_mark:'
-    path: byslib/core/io.py
-    title: byslib/core/io.py
+    path: byslib/core/fastio.py
+    title: byslib/core/fastio.py
   - icon: ':heavy_check_mark:'
     path: byslib/data/__init__.py
     title: byslib/data/__init__.py
@@ -34,25 +34,25 @@ data:
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_add_range_sum\n\
-    import sys\n\nfrom byslib.core.const import IINF, MOD\nfrom byslib.core.io import\
-    \ debug, readline, sinput\nfrom byslib.data.binary_indexed_tree import BinaryIndexedTree\n\
-    \n\ndef main() -> None:\n    _, q = map(int, readline().split())\n    a = list(map(int,\
-    \ readline().split()))\n    bit = BinaryIndexedTree.construct(a)\n    for _ in\
-    \ range(q):\n        t, *que = map(int, readline().split())\n        if t == 0:\n\
-    \            p, x = que\n            bit.add(p, x)\n        else:\n          \
-    \  l, r = que\n            print(bit.range_sum(l, r))\n\n\nif __name__ == \"__main__\"\
-    :\n    sys.setrecursionlimit(10**6)\n    main()\n"
+    import sys\n\nfrom byslib.core.const import IINF, MOD\nfrom byslib.core.fastio\
+    \ import debug, readline, sinput\nfrom byslib.data.binary_indexed_tree import\
+    \ BinaryIndexedTree\n\n\ndef main() -> None:\n    _, q = map(int, readline().split())\n\
+    \    a = list(map(int, readline().split()))\n    bit = BinaryIndexedTree.construct(a)\n\
+    \    for _ in range(q):\n        t, *que = map(int, readline().split())\n    \
+    \    if t == 0:\n            p, x = que\n            bit.add(p, x)\n        else:\n\
+    \            l, r = que\n            print(bit.range_sum(l, r))\n\n\nif __name__\
+    \ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n    main()\n"
   dependsOn:
   - byslib/data/__init__.py
-  - byslib/__init__.py
   - byslib/core/const.py
-  - byslib/data/binary_indexed_tree.py
   - byslib/core/__init__.py
-  - byslib/core/io.py
+  - byslib/__init__.py
+  - byslib/data/binary_indexed_tree.py
+  - byslib/core/fastio.py
   isVerificationFile: true
   path: tests/binary_indexed_tree.test.py
   requiredBy: []
-  timestamp: '2022-03-10 05:04:13+09:00'
+  timestamp: '2022-03-13 15:20:56+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/binary_indexed_tree.test.py

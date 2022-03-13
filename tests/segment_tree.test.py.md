@@ -11,8 +11,8 @@ data:
     path: byslib/core/const.py
     title: byslib/core/const.py
   - icon: ':heavy_check_mark:'
-    path: byslib/core/io.py
-    title: byslib/core/io.py
+    path: byslib/core/fastio.py
+    title: byslib/core/fastio.py
   - icon: ':heavy_check_mark:'
     path: byslib/data/__init__.py
     title: byslib/data/__init__.py
@@ -35,7 +35,7 @@ data:
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_add_range_sum\n\
     import sys\nfrom operator import add\n\nfrom byslib.core.const import IINF, MOD\n\
-    from byslib.core.io import debug, readline, sinput\nfrom byslib.data.segment_tree\
+    from byslib.core.fastio import debug, readline, sinput\nfrom byslib.data.segment_tree\
     \ import SegmentTree\n\n\ndef main() -> None:\n    _, q = map(int, readline().split())\n\
     \    a = list(map(int, readline().split()))\n    seg = SegmentTree(add, 0, a)\n\
     \    for _ in range(q):\n        c, s, t = map(int, sinput().split())\n      \
@@ -44,15 +44,15 @@ data:
     :\n    sys.setrecursionlimit(10**6)\n    main()\n"
   dependsOn:
   - byslib/data/__init__.py
-  - byslib/__init__.py
   - byslib/core/const.py
-  - byslib/data/segment_tree.py
   - byslib/core/__init__.py
-  - byslib/core/io.py
+  - byslib/__init__.py
+  - byslib/data/segment_tree.py
+  - byslib/core/fastio.py
   isVerificationFile: true
   path: tests/segment_tree.test.py
   requiredBy: []
-  timestamp: '2022-03-10 05:04:56+09:00'
+  timestamp: '2022-03-13 15:20:56+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segment_tree.test.py

@@ -11,8 +11,8 @@ data:
     path: byslib/core/const.py
     title: byslib/core/const.py
   - icon: ':heavy_check_mark:'
-    path: byslib/core/io.py
-    title: byslib/core/io.py
+    path: byslib/core/fastio.py
+    title: byslib/core/fastio.py
   - icon: ':heavy_check_mark:'
     path: byslib/graph/__init__.py
     title: byslib/graph/__init__.py
@@ -43,29 +43,29 @@ data:
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/shortest_path\n\
-    from byslib.core.io import sinput\nfrom byslib.core.const import IINF\nfrom byslib.graph.edge\
-    \ import AdjacencyList\nfrom byslib.graph.dijkstra import dijkstra\nfrom byslib.graph.utility\
-    \ import restore_path\n\n\ndef main() -> None:\n    n, m, s, t = map(int, sinput().split())\n\
-    \    graph = AdjacencyList.init(n)\n    for _ in range(m):\n        a, b, c =\
-    \ map(int, sinput().split())\n        graph.add_edge(a, b, c)\n\n    cost, prev\
-    \ = dijkstra(graph, s)\n    if cost[t] == IINF:\n        print(-1)\n    else:\n\
-    \        path = restore_path(prev, t)\n        y = len(path) - 1\n        print(cost[t],\
-    \ y)\n        for i in range(y):\n            print(path[i], path[i + 1])\n\n\n\
-    if __name__ == \"__main__\":\n    main()\n"
+    from byslib.core.fastio import sinput\nfrom byslib.core.const import IINF\nfrom\
+    \ byslib.graph.edge import AdjacencyList\nfrom byslib.graph.dijkstra import dijkstra\n\
+    from byslib.graph.utility import restore_path\n\n\ndef main() -> None:\n    n,\
+    \ m, s, t = map(int, sinput().split())\n    graph = AdjacencyList.init(n)\n  \
+    \  for _ in range(m):\n        a, b, c = map(int, sinput().split())\n        graph.add_edge(a,\
+    \ b, c)\n\n    cost, prev = dijkstra(graph, s)\n    if cost[t] == IINF:\n    \
+    \    print(-1)\n    else:\n        path = restore_path(prev, t)\n        y = len(path)\
+    \ - 1\n        print(cost[t], y)\n        for i in range(y):\n            print(path[i],\
+    \ path[i + 1])\n\n\nif __name__ == \"__main__\":\n    main()\n"
   dependsOn:
-  - byslib/__init__.py
-  - byslib/graph/edge.py
   - byslib/core/const.py
-  - byslib/graph/dijkstra.py
-  - byslib/graph/__init__.py
-  - byslib/graph/utility.py
   - byslib/core/__init__.py
-  - byslib/core/io.py
+  - byslib/graph/__init__.py
   - byslib/graph/depth_first_search.py
+  - byslib/__init__.py
+  - byslib/graph/utility.py
+  - byslib/graph/edge.py
+  - byslib/graph/dijkstra.py
+  - byslib/core/fastio.py
   isVerificationFile: true
   path: tests/dijkstra.test.py
   requiredBy: []
-  timestamp: '2022-03-10 05:05:05+09:00'
+  timestamp: '2022-03-13 15:20:56+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/dijkstra.test.py

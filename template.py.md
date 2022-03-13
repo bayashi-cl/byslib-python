@@ -7,12 +7,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: byslib/core/__init__.py
     title: byslib/core/__init__.py
+  - icon: ':warning:'
+    path: byslib/core/config.py
+    title: byslib/core/config.py
   - icon: ':heavy_check_mark:'
     path: byslib/core/const.py
     title: byslib/core/const.py
   - icon: ':heavy_check_mark:'
-    path: byslib/core/io.py
-    title: byslib/core/io.py
+    path: byslib/core/fastio.py
+    title: byslib/core/fastio.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -25,18 +28,20 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "import sys\n\nfrom byslib.core.const import IINF, MOD\nfrom byslib.core.io\
-    \ import debug, readline, sinput\n\n\ndef main() -> None:\n    ...\n\n\nif __name__\
-    \ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n    main()\n"
+  code: "from byslib.core.config import procon_setup\nfrom byslib.core.const import\
+    \ IINF, MOD\nfrom byslib.core.fastio import debug, readline, sinput\n\n\n@procon_setup\n\
+    def main(**kwargs) -> None:\n    ...\n\n\nif __name__ == \"__main__\":\n    t\
+    \ = 1\n    # t = int(readline())\n    main(t)\n"
   dependsOn:
-  - byslib/__init__.py
   - byslib/core/const.py
   - byslib/core/__init__.py
-  - byslib/core/io.py
+  - byslib/__init__.py
+  - byslib/core/config.py
+  - byslib/core/fastio.py
   isVerificationFile: false
   path: template.py
   requiredBy: []
-  timestamp: '2022-02-28 04:59:03+09:00'
+  timestamp: '2022-03-13 15:21:23+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: template.py
