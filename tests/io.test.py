@@ -1,5 +1,5 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/many_aplusb
-from byslib.core.io import readline
+from byslib.core.fastio import readline
 
 
 def main() -> None:

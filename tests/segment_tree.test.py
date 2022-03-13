@@ -3,7 +3,7 @@ import sys
 from operator import add
 
 from byslib.core.const import IINF, MOD
-from byslib.core.io import debug, readline, sinput
+from byslib.core.fastio import debug, readline, sinput
 from byslib.data.segment_tree import SegmentTree
 
 

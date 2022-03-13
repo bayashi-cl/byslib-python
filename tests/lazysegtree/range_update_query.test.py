@@ -2,7 +2,7 @@
 import sys
 
 from byslib.core.const import IINF, MOD
-from byslib.core.io import debug, readline, sinput
+from byslib.core.fastio import debug, readline, sinput
 
 from byslib.data.lazy_segment_tree import LazySegmentTree
 

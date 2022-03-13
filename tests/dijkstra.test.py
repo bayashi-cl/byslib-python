@@ -1,5 +1,5 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/shortest_path
-from byslib.core.io import sinput
+from byslib.core.fastio import sinput
 from byslib.core.const import IINF
 from byslib.graph.edge import AdjacencyList
 from byslib.graph.dijkstra import dijkstra

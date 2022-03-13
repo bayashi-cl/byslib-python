@@ -1,4 +1,4 @@
-from byslib.core.io import int1
+from byslib.core.fastio import int1
 
 
 def test_sinput_int1():
