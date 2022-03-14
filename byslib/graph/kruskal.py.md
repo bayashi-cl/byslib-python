@@ -16,8 +16,8 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import List, Tuple\n\nfrom .edge import Edge\nfrom ..data.union_find\
-    \ import UnionFindTree\n\n\ndef kruskal(edges: List[Edge], n_node: int) -> Tuple[int,\
+  code: "from typing import List, Tuple\n\nfrom ..data.union_find import UnionFindTree\n\
+    from .edge import Edge\n\n\ndef kruskal(edges: List[Edge], n_node: int) -> Tuple[int,\
     \ List[Edge]]:\n    edges.sort()\n    uft = UnionFindTree(n_node)\n    mst: List[Edge]\
     \ = []\n    cost = 0\n    for e in edges:\n        if uft.union(e.src, e.dest):\n\
     \            cost += e.weight\n            mst.append(e)\n    return cost, mst\n"
@@ -25,7 +25,7 @@ data:
   isVerificationFile: false
   path: byslib/graph/kruskal.py
   requiredBy: []
-  timestamp: '2022-02-28 04:59:03+09:00'
+  timestamp: '2022-03-15 06:00:23+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/kruskal.test.py

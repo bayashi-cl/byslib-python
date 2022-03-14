@@ -46,14 +46,14 @@ data:
   dependsOn:
   - byslib/core/const.py
   - byslib/core/__init__.py
-  - byslib/math/mod_comb.py
+  - byslib/core/fastio.py
   - byslib/__init__.py
   - byslib/math/__init__.py
-  - byslib/core/fastio.py
+  - byslib/math/mod_comb.py
   isVerificationFile: true
   path: tests/mod_comb.test.py
   requiredBy: []
-  timestamp: '2022-03-13 15:20:56+09:00'
+  timestamp: '2022-03-15 05:43:47+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/mod_comb.test.py

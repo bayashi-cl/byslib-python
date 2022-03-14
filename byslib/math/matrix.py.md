@@ -13,8 +13,8 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import Optional, Iterable, TypeVar, Generic, Union\nfrom collections\
-    \ import UserList\n\n_T = TypeVar(\"_T\", int, float)\n\n\nclass Vector(UserList,\
+  code: "from collections import UserList\nfrom typing import Generic, Iterable, Optional,\
+    \ TypeVar, Union\n\n_T = TypeVar(\"_T\", int, float)\n\n\nclass Vector(UserList,\
     \ Generic[_T]):\n    def __init__(self, initlist: Optional[Iterable[_T]]) -> None:\n\
     \        super().__init__(initlist=initlist)\n\n    def __add__(self, other: Union[Iterable[_T],\
     \ _T]) -> \"Vector[_T]\":\n        if isinstance(other, float) or isinstance(other,\
@@ -27,7 +27,7 @@ data:
   isVerificationFile: false
   path: byslib/math/matrix.py
   requiredBy: []
-  timestamp: '2022-02-18 18:18:54+09:00'
+  timestamp: '2022-03-15 06:00:23+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: byslib/math/matrix.py

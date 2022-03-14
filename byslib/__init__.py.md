@@ -50,14 +50,14 @@ data:
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "\"\"\"\nprocon library by bayashi-cl\ngithub repository: https://github.com/bayashi-cl/byslib-python\n\
     \nThis library can be expanded with expander.\n - https://github.com/bayashi-cl/expander\n\
-    \"\"\"\n\n__version__ = \"0.0.1\"\n"
+    \"\"\"\n\n__version__ = \"0.0.2\"\n"
   dependsOn: []
   isVerificationFile: false
   path: byslib/__init__.py
   requiredBy:
   - template.py
   - tests/test_io.py
-  timestamp: '2022-02-28 04:59:03+09:00'
+  timestamp: '2022-03-15 05:43:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/cumulative_sum.test.py

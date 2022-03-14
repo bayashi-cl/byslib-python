@@ -43,17 +43,18 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "import io\nimport os\nimport sys\nfrom functools import partial\n\nreadline\
-    \ = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline\ndebug = partial(print,\
-    \ file=sys.stderr)\n\n\ndef sinput() -> str:\n    return readline().decode().rstrip()\n\
-    \n\ndef int1(s: str) -> int:\n    return int(s) - 1\n"
+  code: "import io\nimport os\nimport sys\nfrom functools import partial\nfrom typing\
+    \ import Union\n\nreadline = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline\n\
+    debug = partial(print, file=sys.stderr)\n\n\ndef sinput() -> str:\n    return\
+    \ readline().decode().rstrip()\n\n\ndef int1(s: Union[str, bytes]) -> int:\n \
+    \   return int(s) - 1\n"
   dependsOn: []
   isVerificationFile: false
   path: byslib/core/fastio.py
   requiredBy:
   - template.py
   - tests/test_io.py
-  timestamp: '2022-03-13 15:20:56+09:00'
+  timestamp: '2022-03-15 05:43:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/cumulative_sum.test.py

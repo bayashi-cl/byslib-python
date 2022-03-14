@@ -13,10 +13,10 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from dataclasses import dataclass\nfrom typing import Generic, TypeVar, Union\n\
-    import math\nimport numbers\n\n\nReal = Union[int, float]\nEPS = 1e-9\n\n\ndef\
-    \ sign(x: float) -> int:\n    if x < -EPS:\n        return -1\n    elif x > EPS:\n\
-    \        return 1\n    else:\n        return 0\n\n\n@dataclass\nclass Point:\n\
+  code: "import math\nimport numbers\nfrom dataclasses import dataclass\nfrom typing\
+    \ import Generic, TypeVar, Union\n\nReal = Union[int, float]\nEPS = 1e-9\n\n\n\
+    def sign(x: float) -> int:\n    if x < -EPS:\n        return -1\n    elif x >\
+    \ EPS:\n        return 1\n    else:\n        return 0\n\n\n@dataclass\nclass Point:\n\
     \    x: Real\n    y: Real\n\n    def __add__(self, other: Union[\"Point\", Real])\
     \ -> \"Point\":\n        if isinstance(other, Point):\n            return Point(self.x\
     \ + other.x, self.y + other.y)\n        else:\n            return Point(self.x\
@@ -64,7 +64,7 @@ data:
   isVerificationFile: false
   path: byslib/geometry/geometry.py
   requiredBy: []
-  timestamp: '2022-02-18 18:18:54+09:00'
+  timestamp: '2022-03-15 06:00:23+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: byslib/geometry/geometry.py

@@ -16,7 +16,7 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import List\nfrom itertools import accumulate\n\n\nclass CumulativeSum:\n\
+  code: "from itertools import accumulate\nfrom typing import List\n\n\nclass CumulativeSum:\n\
     \    def __init__(self, n: int) -> None:\n        self.data = [0] * (n + 1)\n\n\
     \    def update(self, i: int, x: int) -> None:\n        self.data[i + 1] = x\n\
     \n    def add(self, i: int, x: int) -> None:\n        self.data[i + 1] += x\n\n\
@@ -29,7 +29,7 @@ data:
   isVerificationFile: false
   path: byslib/data/cumulative_sum.py
   requiredBy: []
-  timestamp: '2022-03-01 00:20:32+09:00'
+  timestamp: '2022-03-15 06:00:23+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/cumulative_sum.test.py

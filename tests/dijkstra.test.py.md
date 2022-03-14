@@ -43,8 +43,8 @@ data:
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/shortest_path\n\
-    from byslib.core.fastio import sinput\nfrom byslib.core.const import IINF\nfrom\
-    \ byslib.graph.edge import AdjacencyList\nfrom byslib.graph.dijkstra import dijkstra\n\
+    from byslib.core.const import IINF\nfrom byslib.core.fastio import sinput\nfrom\
+    \ byslib.graph.dijkstra import dijkstra\nfrom byslib.graph.edge import AdjacencyList\n\
     from byslib.graph.utility import restore_path\n\n\ndef main() -> None:\n    n,\
     \ m, s, t = map(int, sinput().split())\n    graph = AdjacencyList.init(n)\n  \
     \  for _ in range(m):\n        a, b, c = map(int, sinput().split())\n        graph.add_edge(a,\
@@ -54,18 +54,18 @@ data:
     \ path[i + 1])\n\n\nif __name__ == \"__main__\":\n    main()\n"
   dependsOn:
   - byslib/core/const.py
-  - byslib/core/__init__.py
-  - byslib/graph/__init__.py
-  - byslib/graph/depth_first_search.py
-  - byslib/__init__.py
-  - byslib/graph/utility.py
   - byslib/graph/edge.py
   - byslib/graph/dijkstra.py
+  - byslib/core/__init__.py
   - byslib/core/fastio.py
+  - byslib/__init__.py
+  - byslib/graph/depth_first_search.py
+  - byslib/graph/utility.py
+  - byslib/graph/__init__.py
   isVerificationFile: true
   path: tests/dijkstra.test.py
   requiredBy: []
-  timestamp: '2022-03-13 15:20:56+09:00'
+  timestamp: '2022-03-15 06:00:23+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/dijkstra.test.py

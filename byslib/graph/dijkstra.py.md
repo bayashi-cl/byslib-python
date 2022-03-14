@@ -16,8 +16,8 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "import heapq\r\nfrom typing import List, Tuple\r\n\r\nfrom .edge import AdjacencyList\r\
-    \nfrom ..core.const import IINF\r\n\r\n\r\ndef dijkstra(graph: AdjacencyList,\
+  code: "import heapq\r\nfrom typing import List, Tuple\r\n\r\nfrom ..core.const import\
+    \ IINF\r\nfrom .edge import AdjacencyList\r\n\r\n\r\ndef dijkstra(graph: AdjacencyList,\
     \ source: int) -> Tuple[List[int], List[int]]:\r\n    n = len(graph)\r\n    cost\
     \ = [IINF] * n\r\n    cost[source] = 0\r\n    prev = [-1] * n\r\n    que: List[Tuple[int,\
     \ int]] = [(0, source)]\r\n    while que:\r\n        top_cost, top = heapq.heappop(que)\r\
@@ -30,7 +30,7 @@ data:
   isVerificationFile: false
   path: byslib/graph/dijkstra.py
   requiredBy: []
-  timestamp: '2022-02-28 04:59:03+09:00'
+  timestamp: '2022-03-15 06:00:23+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/dijkstra.test.py

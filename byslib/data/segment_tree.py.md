@@ -16,7 +16,7 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import List, TypeVar, Generic, Callable\n\nT = TypeVar(\"T\"\
+  code: "from typing import Callable, Generic, List, TypeVar\n\nT = TypeVar(\"T\"\
     )\n\n\nclass SegmentTree(Generic[T]):\n    def __init__(self, op: Callable[[T,\
     \ T], T], ident: T, val: List[T]) -> None:\n        self.op = op\n        self.ident\
     \ = ident\n        self.n = len(val)\n        self.n_leaf = 1 << (self.n - 1).bit_length()\n\
@@ -40,7 +40,7 @@ data:
   isVerificationFile: false
   path: byslib/data/segment_tree.py
   requiredBy: []
-  timestamp: '2022-03-10 05:04:56+09:00'
+  timestamp: '2022-03-15 06:00:23+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segment_tree.test.py

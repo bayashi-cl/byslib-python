@@ -33,13 +33,13 @@ data:
     \ else:\n            print(1 if uft.same(u, v) else 0)\n\n\nif __name__ == \"\
     __main__\":\n    main()\n"
   dependsOn:
-  - byslib/__init__.py
   - byslib/data/union_find.py
   - byslib/data/__init__.py
+  - byslib/__init__.py
   isVerificationFile: true
   path: tests/union_find.test.py
   requiredBy: []
-  timestamp: '2022-02-28 04:59:03+09:00'
+  timestamp: '2022-03-15 06:00:23+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/union_find.test.py

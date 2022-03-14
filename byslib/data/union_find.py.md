@@ -19,7 +19,7 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import List, Dict\n\n\nclass UnionFindTree:\n    \"\"\"Union-Find\u6728\
+  code: "from typing import Dict, List\n\n\nclass UnionFindTree:\n    \"\"\"Union-Find\u6728\
     \"\"\"\n\n    def __init__(self, n: int) -> None:\n        self.n = n\n      \
     \  self.n_tree = n\n        self.parent = [-1] * self.n  # \u8CA0\u306A\u3089\u89AA\
     \u3067\u3042\u308A\u305D\u306E\u5024\u306F(-\u5B50\u306E\u6570)\n\n    def find(self,\
@@ -41,7 +41,7 @@ data:
   isVerificationFile: false
   path: byslib/data/union_find.py
   requiredBy: []
-  timestamp: '2022-02-28 04:59:03+09:00'
+  timestamp: '2022-03-15 06:00:23+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/union_find.test.py

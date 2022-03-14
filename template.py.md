@@ -35,13 +35,13 @@ data:
   dependsOn:
   - byslib/core/const.py
   - byslib/core/__init__.py
+  - byslib/core/fastio.py
   - byslib/__init__.py
   - byslib/core/config.py
-  - byslib/core/fastio.py
   isVerificationFile: false
   path: template.py
   requiredBy: []
-  timestamp: '2022-03-13 15:21:23+09:00'
+  timestamp: '2022-03-15 05:43:47+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: template.py

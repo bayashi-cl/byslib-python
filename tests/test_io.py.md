@@ -26,12 +26,12 @@ data:
     \ int1(\"5\") == 4\n"
   dependsOn:
   - byslib/core/__init__.py
-  - byslib/__init__.py
   - byslib/core/fastio.py
+  - byslib/__init__.py
   isVerificationFile: false
   path: tests/test_io.py
   requiredBy: []
-  timestamp: '2022-03-13 15:20:56+09:00'
+  timestamp: '2022-03-15 05:43:47+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: tests/test_io.py

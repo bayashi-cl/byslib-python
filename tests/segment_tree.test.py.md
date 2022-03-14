@@ -43,16 +43,16 @@ data:
     \      else:\n            print(seg.query(s, t))\n\n\nif __name__ == \"__main__\"\
     :\n    sys.setrecursionlimit(10**6)\n    main()\n"
   dependsOn:
-  - byslib/data/__init__.py
   - byslib/core/const.py
   - byslib/core/__init__.py
+  - byslib/core/fastio.py
   - byslib/__init__.py
   - byslib/data/segment_tree.py
-  - byslib/core/fastio.py
+  - byslib/data/__init__.py
   isVerificationFile: true
   path: tests/segment_tree.test.py
   requiredBy: []
-  timestamp: '2022-03-13 15:20:56+09:00'
+  timestamp: '2022-03-15 06:00:23+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segment_tree.test.py

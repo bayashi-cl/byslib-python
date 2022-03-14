@@ -29,13 +29,13 @@ data:
     \    for _ in range(t):\n        a, b = map(int, readline().split())\n       \
     \ print(a + b)\n\n\nif __name__ == \"__main__\":\n    main()\n"
   dependsOn:
-  - byslib/__init__.py
   - byslib/core/__init__.py
   - byslib/core/fastio.py
+  - byslib/__init__.py
   isVerificationFile: true
   path: tests/io.test.py
   requiredBy: []
-  timestamp: '2022-03-13 15:20:56+09:00'
+  timestamp: '2022-03-15 05:43:47+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/io.test.py
