@@ -1,5 +1,5 @@
-from typing import Optional, Iterable, TypeVar, Generic, Union
 from collections import UserList
+from typing import Generic, Iterable, Optional, TypeVar, Union
 
 _T = TypeVar("_T", int, float)
 

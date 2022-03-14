@@ -1,8 +1,7 @@
-from dataclasses import dataclass
-from typing import Generic, TypeVar, Union
 import math
 import numbers
-
+from dataclasses import dataclass
+from typing import Generic, TypeVar, Union
 
 Real = Union[int, float]
 EPS = 1e-9

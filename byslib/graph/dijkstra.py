@@ -1,8 +1,8 @@
 import heapq
 from typing import List, Tuple
 
-from .edge import AdjacencyList
 from ..core.const import IINF
+from .edge import AdjacencyList
 
 
 def dijkstra(graph: AdjacencyList, source: int) -> Tuple[List[int], List[int]]:

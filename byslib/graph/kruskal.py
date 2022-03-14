@@ -1,7 +1,7 @@
 from typing import List, Tuple
 
-from .edge import Edge
 from ..data.union_find import UnionFindTree
+from .edge import Edge
 
 
 def kruskal(edges: List[Edge], n_node: int) -> Tuple[int, List[Edge]]:

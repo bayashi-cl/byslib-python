@@ -1,5 +1,5 @@
-from typing import List
 from itertools import accumulate
+from typing import List
 
 
 class CumulativeSum:

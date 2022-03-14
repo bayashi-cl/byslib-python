@@ -1,8 +1,7 @@
 from typing import List, Tuple
 
-
-from .edge import AdjacencyList, Edge
 from .depth_first_search import DepthFirstSearch
+from .edge import AdjacencyList, Edge
 
 SSSPResult = Tuple[List[int], List[int]]
 

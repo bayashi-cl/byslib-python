@@ -2,7 +2,7 @@
 import sys
 
 from byslib.core.const import IINF, MOD
-from byslib.core.fastio import debug, sinput, readline
+from byslib.core.fastio import debug, readline, sinput
 from byslib.graph.edge import Edge
 from byslib.graph.kruskal import kruskal
 
