@@ -42,12 +42,12 @@ data:
     \ print(cs.sum(l, r))\n\n\nif __name__ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n\
     \    main()\n"
   dependsOn:
-  - byslib/core/const.py
+  - byslib/__init__.py
+  - byslib/core/fastio.py
+  - byslib/data/__init__.py
   - byslib/data/cumulative_sum.py
   - byslib/core/__init__.py
-  - byslib/core/fastio.py
-  - byslib/__init__.py
-  - byslib/data/__init__.py
+  - byslib/core/const.py
   isVerificationFile: true
   path: tests/cumulative_sum.test.py
   requiredBy: []

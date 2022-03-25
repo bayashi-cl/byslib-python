@@ -103,6 +103,17 @@ data:
     - icon: ':warning:'
       path: byslib/math/rational.py
       title: byslib/math/rational.py
+  - name: byslib/numeric
+    pages:
+    - icon: ':warning:'
+      path: byslib/numeric/__init__.py
+      title: byslib/numeric/__init__.py
+    - icon: ':warning:'
+      path: byslib/numeric/modarray.py
+      title: byslib/numeric/modarray.py
+    - icon: ':warning:'
+      path: byslib/numeric/modint.py
+      title: byslib/numeric/modint.py
   - name: byslib/utility
     pages:
     - icon: ':warning:'

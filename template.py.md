@@ -33,11 +33,11 @@ data:
     def main(**kwargs) -> None:\n    ...\n\n\nif __name__ == \"__main__\":\n    t\
     \ = 1\n    # t = int(readline())\n    main(t)\n"
   dependsOn:
-  - byslib/core/const.py
-  - byslib/core/__init__.py
-  - byslib/core/fastio.py
-  - byslib/__init__.py
   - byslib/core/config.py
+  - byslib/__init__.py
+  - byslib/core/fastio.py
+  - byslib/core/__init__.py
+  - byslib/core/const.py
   isVerificationFile: false
   path: template.py
   requiredBy: []
