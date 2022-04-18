@@ -1,16 +1,35 @@
+# @title Binary search
 from typing import Callable
 
 
 def meguru_bisect(ok: int, ng: int, is_ok: Callable[..., bool], *args) -> int:
-    """二分探索法
-    Args:
-        ok (int): is_okを満たす初期値
-        ng (int): is_okを満たさない初期値
-        is_ok (typing.Callable[..., bool]): 判定用関数
-        *args (object): is_okに渡される引数
+    """Binary Search
 
-    Returns:
-        int: is_okを満たす最大/小の整数
+    Parameters
+    ----------
+    ok
+        Inital value s.t. is_ok(ok) == True
+    ng
+        Inital value s.t. is_ok(ng) == False
+    is_ok
+        Judge function
+
+    Returns
+    -------
+        number of is_ok(x) == True and is_ok(x ± 1) == False
+
+    Notes
+    -----
+    Time complexity
+
+    O(log(abs(ok-ng)))
+
+    References
+    ----------
+    ..[1] https://twitter.com/meguru_comp/status/697008509376835584
+
+    Examples
+    --------
     """
     assert is_ok(ok, *args)
     assert not is_ok(ng, *args)

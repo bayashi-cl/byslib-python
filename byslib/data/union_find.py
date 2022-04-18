@@ -1,8 +1,30 @@
+# @brief Union-Find Tree
 from typing import Dict, List
 
 
 class UnionFindTree:
-    """Union-Find木"""
+    """Union-Find Tree
+    Notes
+    -----
+    Time complexity
+
+    * union : :math:`O(α(N))`
+    * find : :math:`O(α(N))`
+
+    Examples
+    --------
+    >>> uft = UnionFindTree(5)
+    >>> uft.union(0, 4)
+    True
+    >>> uft.union(0, 3)
+    True
+    >>> print(uft.same(3, 4))
+    True
+
+    References
+    ----------
+    ..[1] 🐜 p.81
+    """
 
     def __init__(self, n: int) -> None:
         self.n = n
@@ -54,3 +76,9 @@ class UnionFindTree:
                 res[leader] = [i]
 
         return res
+
+
+if __name__ == "__main__":
+    import doctest
+
+    doctest.testmod()

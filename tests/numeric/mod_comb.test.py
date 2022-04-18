@@ -1,12 +1,11 @@
 # verification-helper: PROBLEM https://yukicoder.me/problems/no/117
-import sys
-
-from byslib.core.const import IINF, MOD
-from byslib.core.fastio import debug, readline, sinput
-from byslib.math.mod_comb import MultiComb
+from byslib.core.config import procon_setup
+from byslib.core.fastio import readline, sinput
+from byslib.numeric.mod_comb import MultiComb
 
 
-def main() -> None:
+@procon_setup
+def main(**kwargs) -> None:
     t = int(readline())
     mc = MultiComb(2_000_000)
 
@@ -25,5 +24,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    sys.setrecursionlimit(10**6)
-    main()
+    t = 1
+    # t = int(readline())
+    main(t)

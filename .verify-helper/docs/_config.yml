@@ -4,4 +4,4 @@ plugins:
 - jekyll-redirect-from
 theme: jekyll-theme-minimal
 include: ["__init__.py.md"]
-exclude: ["setup.py", "byslib/draft"]
+exclude: ["setup.py", "build"]

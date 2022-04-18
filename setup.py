@@ -10,5 +10,5 @@ setuptools.setup(
     author_email="bayashi.cl@gmail.com",
     license="CC0",
     description="Python library for competitive programming",
-    packages=setuptools.find_packages(exclude=("tests",)),
+    packages=setuptools.find_packages(exclude=("tests*",)),
 )

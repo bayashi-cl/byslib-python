@@ -1,7 +1,12 @@
+# @title Modint
 from typing import Union
 
 
 class modint:
+    """Modint
+    Not so fast.
+    """
+
     __slots__ = ("v",)
     mod: int = 0
 
@@ -104,6 +109,19 @@ class modint:
 
 
 def using_modint(modulo: int):
+    """using modint
+
+    set modulo to modint class
+
+    Parameters
+    ----------
+    modulo
+
+    Returns
+    -------
+        modint class mod = modulo
+    """
+
     class Mint(modint):
         __slots__ = ()
         mod: int = modulo

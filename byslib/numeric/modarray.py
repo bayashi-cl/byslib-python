@@ -1,8 +1,24 @@
+# @title Modarray
 from array import array
 
 
 def using_modarray(modulo: int):
+    """Set modulo to modarray class.
+
+    Parameters
+    ----------
+    modulo
+
+    Returns
+    -------
+        modarray class mod is modulo
+    """
+
     class ModArray(array):
+        """Mod Array
+        Take a mod for every assignment.
+        """
+
         __slots__ = ()
         mod: int = modulo
 

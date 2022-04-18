@@ -1,16 +1,16 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/shortest_path
 from byslib.core.const import IINF
-from byslib.core.fastio import sinput
+from byslib.core.fastio import readline
+from byslib.graph import LilMatrix
 from byslib.graph.dijkstra import dijkstra
-from byslib.graph.edge import AdjacencyList
 from byslib.graph.utility import restore_path
 
 
 def main() -> None:
-    n, m, s, t = map(int, sinput().split())
-    graph = AdjacencyList.init(n)
+    n, m, s, t = map(int, readline().split())
+    graph = LilMatrix.empty(n)
     for _ in range(m):
-        a, b, c = map(int, sinput().split())
+        a, b, c = map(int, readline().split())
         graph.add_edge(a, b, c)
 
     cost, prev = dijkstra(graph, s)

@@ -1,9 +1,8 @@
+# @title Graph Utility
 from typing import List, Tuple
 
 from .depth_first_search import DepthFirstSearch
-from .edge import AdjacencyList, Edge
-
-SSSPResult = Tuple[List[int], List[int]]
+from .graph import LilMatrix
 
 
 def restore_path(prev: List[int], to: int) -> List[int]:
@@ -14,11 +13,11 @@ def restore_path(prev: List[int], to: int) -> List[int]:
     return res[::-1]
 
 
-def rooted_tree(graph: AdjacencyList, root: int) -> AdjacencyList:
+def rooted_tree(graph: LilMatrix, root: int) -> LilMatrix:
     dfs = DepthFirstSearch(graph)
-    res = AdjacencyList.init(len(graph))
+    res = LilMatrix.empty(len(graph))
     for now in dfs.pre_order(root):
-        for nxt in graph[now]:
-            if nxt.dest != dfs.prev[now]:
-                res.add_edge(nxt.src, nxt.dest, nxt.weight)
+        for dest, weight in graph[now]:
+            if dest != dfs.prev[now]:
+                res.add_edge(now, dest, weight)
     return res

@@ -6,4 +6,4 @@ This library can be expanded with expander.
  - https://github.com/bayashi-cl/expander
 """
 
-__version__ = "0.0.2"
+__version__ = "0.1.0"

@@ -1,56 +1,47 @@
-# region template
-import sys
-import typing
-from typing import Callable, Dict, List, Set, Tuple
+# @title Warshall Floyd
+from typing import List
 
-sys.setrecursionlimit(10 ** 6)
-Vec = List[int]
-VecVec = List[Vec]
-sinput: Callable[..., str] = sys.stdin.readline
-MOD: int = 1000000007
-INF: float = float("Inf")
-IINF: int = sys.maxsize
-# endregion
+from ..core.const import IINF
+from .edge import Edge
 
 
-class WarshallFloyd:
-    Edge = Tuple[int, int]  # (cost, node)
-    Adj = List[List[Edge]]
+def warshall_floyd(elist: List[Edge], n: int) -> List[List[int]]:
+    """warshall floyd
 
-    def __init__(self, graph: Adj) -> None:
-        self.n_node = len(graph)
-        self.prev = [-1] * self.n_node
-        self.cost = [[INF] * self.n_node for _ in range(self.n_node)]
+    Parameters
+    ----------
+    elist
+        List of Edge
+    n
+        Vertex Size
 
-        for dep, edge in enumerate(graph):
-            for dist, arr in edge:
-                self.cost[dep][arr] = dist
+    Returns
+    -------
+    Cost matrix
 
-        for i in range(self.n_node):
-            self.cost[i][i] = 0
+    Notes
+    -----
+    Time complexity
 
-    def search(self) -> None:
-        for k in range(self.n_node):
-            for i in range(self.n_node):
-                for j in range(self.n_node):
-                    if (dist := self.cost[i][k] + self.cost[k][j]) < self.cost[i][j]:
-                        self.cost[i][j] = dist
-                        self.prev[j] = k
+    O(N^3)
 
-    def path_finder(self, to: int) -> List[int]:
-        assert to <= self.n_node
+    References
+    ----------
+    ..[1] 🐜 p.98
+    """
+    cost = [[IINF] * n for _ in range(n)]
+    for e in elist:
+        cost[e.src][e.dest] = e.weight
+    for i in range(n):
+        cost[i][i] == 0
 
-        path = []
-        while to != -1:
-            path.append(to)
-            to = self.prev[to]
+    for k in range(n):
+        for i in range(n):
+            for j in range(n):
+                if cost[i][k] == IINF or cost[k][j] == IINF:
+                    continue
+                tmp_cost = cost[i][k] + cost[k][j]
+                if cost[i][j] > tmp_cost:
+                    cost[i][j] = tmp_cost
 
-        return path[::-1]
-
-
-def main() -> None:
-    ...
-
-
-if __name__ == "__main__":
-    main()
+    return cost

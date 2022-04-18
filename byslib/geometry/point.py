@@ -1,23 +1,29 @@
+# @title Point
+import enum
 import math
-import numbers
 from dataclasses import dataclass
-from typing import Generic, TypeVar, Union
+from typing import Union
 
 Real = Union[int, float]
 EPS = 1e-9
 
 
 def sign(x: float) -> int:
-    if x < -EPS:
-        return -1
-    elif x > EPS:
-        return 1
-    else:
+    if math.isclose(x, 0):
         return 0
+    elif x < 0:
+        return -1
+    else:
+        return 1
 
 
 @dataclass
 class Point:
+    """vector or point
+
+    Support both int and float choordinate.
+    """
+
     x: Real
     y: Real
 
@@ -80,12 +86,12 @@ class Point:
         return not self == other
 
     def norm2(self) -> Real:
-        return self.x ** 2 + self.y ** 2
+        return self.x**2 + self.y**2
 
     def norm(self) -> float:
         return math.sqrt(self.norm2())
 
-    def normalized(self) -> "Point":
+    def unit(self) -> "Point":
         n = self.norm()
         return Point(self.x / n, self.y / n)
 
@@ -98,7 +104,7 @@ class Point:
         return 4 if sign(self.x) >= 0 else 3
 
     def normal(self) -> "Point":
-        return Point(-self.normalized().y, self.normalized().x)
+        return Point(-self.unit().y, self.unit().x)
 
     def manhattan_rotate(self) -> "Point":
         return Point(self.x - self.y, self.x + self.y)
@@ -124,7 +130,56 @@ class Point:
             return q < oq
         return sign(self.det(other)) > 0
 
+    def __repr__(self) -> str:
+        return f"{self.x} {self.y}"
 
-if __name__ == "__main__":
-    p = Point(3, 4)
-    print(p.norm())
+
+@enum.unique
+class Turn(enum.IntEnum):
+    """Turn direction"""
+
+    BACK = -2
+    CW = -1
+    MIDDLE = 0
+    CCW = 1
+    FRONT = 2
+
+
+def iSP(a: Point, b: Point, c: Point) -> Turn:
+    """iSP
+
+    Determine the positional relationship of the three Points.
+
+    Returns
+    -------
+        Turn direction
+    """
+    flg = sign((b - a).det(c - a))
+    if flg == 1:
+        return Turn.CCW
+    elif flg == -1:
+        return Turn.CW
+    else:
+        if sign((b - a).dot(c - b)) > 0:
+            return Turn.FRONT
+        elif sign((a - b).dot(c - a)) > 0:
+            return Turn.BACK
+        else:
+            return Turn.MIDDLE
+
+
+@enum.unique
+class Angle(enum.IntEnum):
+    """Angle type"""
+
+    NOT_ANGLE = -2
+    OBTUSE = -1
+    RIGHT = 0
+    ACUTE = 1
+
+
+def angle_type(a: Point, b: Point, c: Point) -> Angle:
+    if abs(iSP(a, b, c)) == 1:
+        return Angle.NOT_ANGLE
+    else:
+        return Angle(sign((a - b).dot(c - b)))

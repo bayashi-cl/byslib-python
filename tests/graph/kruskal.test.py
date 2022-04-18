@@ -1,9 +1,8 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_2_A
 import sys
 
-from byslib.core.const import IINF, MOD
-from byslib.core.fastio import debug, readline, sinput
-from byslib.graph.edge import Edge
+from byslib.core.fastio import sinput
+from byslib.graph import Edge
 from byslib.graph.kruskal import kruskal
 
 

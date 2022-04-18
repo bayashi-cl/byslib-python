@@ -1,3 +1,4 @@
+# @title Pypy config
 try:
     import pypyjit  # type: ignore
 
