@@ -13,18 +13,22 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 80, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: ''
+  code: "import subprocess\nimport sys\n\n\ndef exec_pytest(file: str) -> int:\n \
+    \   args = [\"pytest\", file, \"--import-mode=importlib\"]\n    try:\n       \
+    \ subprocess.run(args, text=True, check=True, stdout=sys.stderr)\n    except subprocess.CalledProcessError\
+    \ as e:\n        print(e, file=sys.stderr)\n        return 1\n    else:\n    \
+    \    print(\"Hello World\")\n        return 0\n"
   dependsOn: []
   isVerificationFile: false
-  path: byslib/utility/__init__.py
+  path: tests/verify_pytest/exec_pytest.py
   requiredBy: []
-  timestamp: '2022-02-28 04:59:03+09:00'
+  timestamp: '2022-04-18 22:29:22+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: byslib/utility/__init__.py
+documentation_of: tests/verify_pytest/exec_pytest.py
 layout: document
 redirect_from:
-- /library/byslib/utility/__init__.py
-- /library/byslib/utility/__init__.py.html
-title: byslib/utility/__init__.py
+- /library/tests/verify_pytest/exec_pytest.py
+- /library/tests/verify_pytest/exec_pytest.py.html
+title: tests/verify_pytest/exec_pytest.py
 ---

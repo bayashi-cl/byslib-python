@@ -8,46 +8,40 @@ data:
     path: byslib/core/__init__.py
     title: Core Featule
   - icon: ':heavy_check_mark:'
-    path: byslib/core/config.py
-    title: setup
-  - icon: ':heavy_check_mark:'
-    path: byslib/core/const.py
-    title: Const
-  - icon: ':heavy_check_mark:'
     path: byslib/core/fastio.py
     title: Fast I/O
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    links: []
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A
+    links:
+    - https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 80, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from byslib.core.config import procon_setup\nfrom byslib.core.const import\
-    \ IINF, MOD\nfrom byslib.core.fastio import debug, readline, sinput\n\n\n@procon_setup\n\
-    def main(**kwargs) -> None:\n    ...\n\n\nif __name__ == \"__main__\":\n    t\
-    \ = 1\n    # t = int(readline())\n    main(t)\n"
+  code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A\n\
+    from byslib.core.fastio import int1\n\n\ndef test_sinput_int1():\n    assert int1(\"\
+    5\") == 4\n\n\nif __name__ == \"__main__\":\n    import sys\n\n    from exec_pytest\
+    \ import exec_pytest\n\n    sys.exit(exec_pytest(__file__))\n"
   dependsOn:
-  - byslib/core/config.py
-  - byslib/__init__.py
-  - byslib/core/const.py
   - byslib/core/fastio.py
+  - byslib/__init__.py
   - byslib/core/__init__.py
-  isVerificationFile: false
-  path: template.py
+  isVerificationFile: true
+  path: tests/verify_pytest/test_io.test.py
   requiredBy: []
   timestamp: '2022-04-18 22:29:22+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: template.py
+documentation_of: tests/verify_pytest/test_io.test.py
 layout: document
 redirect_from:
-- /library/template.py
-- /library/template.py.html
-title: template.py
+- /verify/tests/verify_pytest/test_io.test.py
+- /verify/tests/verify_pytest/test_io.test.py.html
+title: tests/verify_pytest/test_io.test.py
 ---

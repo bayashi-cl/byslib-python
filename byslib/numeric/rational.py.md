@@ -8,11 +8,11 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
-    \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
-    , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
+    \  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    , line 80, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "import numbers\n\n\nclass Rational(numbers.Rational):\n    _numerator: int\n\
     \    _denominator: int\n\n    def __init__(self, numerator: int, denomerator:\
     \ int) -> None:\n        sgn = 1\n        if denomerator < 0:\n            sgn\
@@ -58,15 +58,15 @@ data:
     \n    @property\n    def denominator(self) -> int:\n        return self._denominator\n"
   dependsOn: []
   isVerificationFile: false
-  path: byslib/math/rational.py
+  path: byslib/numeric/rational.py
   requiredBy: []
-  timestamp: '2022-02-14 17:11:18+09:00'
+  timestamp: '2022-04-18 22:29:22+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: byslib/math/rational.py
+documentation_of: byslib/numeric/rational.py
 layout: document
 redirect_from:
-- /library/byslib/math/rational.py
-- /library/byslib/math/rational.py.html
-title: byslib/math/rational.py
+- /library/byslib/numeric/rational.py
+- /library/byslib/numeric/rational.py.html
+title: byslib/numeric/rational.py
 ---

@@ -6,19 +6,19 @@ data:
     title: byslib/__init__.py
   - icon: ':heavy_check_mark:'
     path: byslib/core/__init__.py
-    title: byslib/core/__init__.py
+    title: Core Featule
   - icon: ':heavy_check_mark:'
     path: byslib/core/const.py
-    title: byslib/core/const.py
+    title: Const
   - icon: ':heavy_check_mark:'
     path: byslib/core/fastio.py
-    title: byslib/core/fastio.py
+    title: Fast I/O
   - icon: ':heavy_check_mark:'
     path: byslib/data/__init__.py
-    title: byslib/data/__init__.py
+    title: Data Structure
   - icon: ':heavy_check_mark:'
     path: byslib/data/lazy_segment_tree.py
-    title: byslib/data/lazy_segment_tree.py
+    title: Lazy Segment Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -28,11 +28,11 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir], 'release': True}).decode()\n\
-    \  File \"/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
-    , line 74, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
+    \  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    , line 80, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F\n\
     import sys\n\nfrom byslib.core.const import IINF, MOD\nfrom byslib.core.fastio\
     \ import debug, readline, sinput\nfrom byslib.data.lazy_segment_tree import LazySegmentTree\n\
@@ -47,22 +47,22 @@ data:
     \ t + 1))\n\n\nif __name__ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n\
     \    main()\n"
   dependsOn:
-  - byslib/__init__.py
-  - byslib/core/fastio.py
   - byslib/data/__init__.py
-  - byslib/core/__init__.py
-  - byslib/core/const.py
   - byslib/data/lazy_segment_tree.py
+  - byslib/__init__.py
+  - byslib/core/const.py
+  - byslib/core/fastio.py
+  - byslib/core/__init__.py
   isVerificationFile: true
-  path: tests/lazysegtree/range_update_query.test.py
+  path: tests/data/lazysegtree/range_update_query.test.py
   requiredBy: []
-  timestamp: '2022-03-15 06:00:23+09:00'
+  timestamp: '2022-04-18 22:29:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/lazysegtree/range_update_query.test.py
+documentation_of: tests/data/lazysegtree/range_update_query.test.py
 layout: document
 redirect_from:
-- /verify/tests/lazysegtree/range_update_query.test.py
-- /verify/tests/lazysegtree/range_update_query.test.py.html
-title: tests/lazysegtree/range_update_query.test.py
+- /verify/tests/data/lazysegtree/range_update_query.test.py
+- /verify/tests/data/lazysegtree/range_update_query.test.py.html
+title: tests/data/lazysegtree/range_update_query.test.py
 ---

@@ -10,110 +10,102 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: byslib/core/__init__.py
-      title: byslib/core/__init__.py
-    - icon: ':warning:'
+      title: Core Featule
+    - icon: ':heavy_check_mark:'
       path: byslib/core/config.py
-      title: byslib/core/config.py
+      title: setup
     - icon: ':heavy_check_mark:'
       path: byslib/core/const.py
-      title: byslib/core/const.py
+      title: Const
     - icon: ':heavy_check_mark:'
       path: byslib/core/fastio.py
-      title: byslib/core/fastio.py
+      title: Fast I/O
     - icon: ':warning:'
       path: byslib/core/pypyconf.py
-      title: byslib/core/pypyconf.py
+      title: Pypy config
   - name: byslib/data
     pages:
     - icon: ':heavy_check_mark:'
       path: byslib/data/__init__.py
-      title: byslib/data/__init__.py
+      title: Data Structure
     - icon: ':heavy_check_mark:'
       path: byslib/data/binary_indexed_tree.py
-      title: byslib/data/binary_indexed_tree.py
+      title: Bynary Indexed Tree
     - icon: ':heavy_check_mark:'
       path: byslib/data/cumulative_sum.py
-      title: byslib/data/cumulative_sum.py
+      title: Cumulative Sum
     - icon: ':heavy_check_mark:'
       path: byslib/data/lazy_segment_tree.py
-      title: byslib/data/lazy_segment_tree.py
+      title: Lazy Segment Tree
     - icon: ':heavy_check_mark:'
       path: byslib/data/segment_tree.py
-      title: byslib/data/segment_tree.py
+      title: Segment Tree
     - icon: ':heavy_check_mark:'
       path: byslib/data/union_find.py
-      title: byslib/data/union_find.py
+      title: Union-Find Tree
   - name: byslib/geometry
     pages:
     - icon: ':warning:'
       path: byslib/geometry/__init__.py
-      title: byslib/geometry/__init__.py
+      title: Geometry
     - icon: ':warning:'
-      path: byslib/geometry/geometry.py
-      title: byslib/geometry/geometry.py
+      path: byslib/geometry/point.py
+      title: Point
   - name: byslib/graph
     pages:
     - icon: ':heavy_check_mark:'
       path: byslib/graph/__init__.py
-      title: byslib/graph/__init__.py
+      title: Graph
     - icon: ':warning:'
       path: byslib/graph/breadth_first_search.py
-      title: byslib/graph/breadth_first_search.py
+      title: Breadth First Search
     - icon: ':heavy_check_mark:'
       path: byslib/graph/depth_first_search.py
-      title: byslib/graph/depth_first_search.py
+      title: Depth First Search
     - icon: ':heavy_check_mark:'
       path: byslib/graph/dijkstra.py
-      title: byslib/graph/dijkstra.py
+      title: Dijkstra
     - icon: ':heavy_check_mark:'
       path: byslib/graph/edge.py
-      title: byslib/graph/edge.py
+      title: Edge
+    - icon: ':heavy_check_mark:'
+      path: byslib/graph/graph.py
+      title: Adjacency List
     - icon: ':heavy_check_mark:'
       path: byslib/graph/kruskal.py
-      title: byslib/graph/kruskal.py
-    - icon: ':warning:'
-      path: byslib/graph/scc_sample.py
-      title: byslib/graph/scc_sample.py
+      title: kruskal
     - icon: ':heavy_check_mark:'
       path: byslib/graph/utility.py
-      title: byslib/graph/utility.py
+      title: Graph Utility
     - icon: ':warning:'
       path: byslib/graph/warshall_floyd.py
-      title: byslib/graph/warshall_floyd.py
-  - name: byslib/math
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: byslib/math/__init__.py
-      title: byslib/math/__init__.py
-    - icon: ':warning:'
-      path: byslib/math/make_divisor.py
-      title: byslib/math/make_divisor.py
-    - icon: ':warning:'
-      path: byslib/math/matrix.py
-      title: byslib/math/matrix.py
-    - icon: ':heavy_check_mark:'
-      path: byslib/math/mod_comb.py
-      title: byslib/math/mod_comb.py
-    - icon: ':warning:'
-      path: byslib/math/modint.py
-      title: byslib/math/modint.py
-    - icon: ':warning:'
-      path: byslib/math/mymath.py
-      title: byslib/math/mymath.py
-    - icon: ':warning:'
-      path: byslib/math/rational.py
-      title: byslib/math/rational.py
+      title: Warshall Floyd
   - name: byslib/numeric
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: byslib/numeric/__init__.py
       title: byslib/numeric/__init__.py
     - icon: ':warning:'
+      path: byslib/numeric/divisor.py
+      title: Divisor
+    - icon: ':warning:'
+      path: byslib/numeric/euclid.py
+      title: Euclid
+    - icon: ':warning:'
+      path: byslib/numeric/matrix.py
+      title: Matrix
+    - icon: ':heavy_check_mark:'
+      path: byslib/numeric/mod_comb.py
+      title: Binomial coefficient
+    - icon: ':warning:'
       path: byslib/numeric/modarray.py
-      title: byslib/numeric/modarray.py
+      title: Modarray
     - icon: ':warning:'
       path: byslib/numeric/modint.py
-      title: byslib/numeric/modint.py
+      title: Modint
+    - icon: ':warning:'
+      path: byslib/numeric/rational.py
+      title: byslib/numeric/rational.py
   - name: byslib/utility
     pages:
     - icon: ':warning:'
@@ -121,58 +113,63 @@ data:
       title: byslib/utility/__init__.py
     - icon: ':warning:'
       path: byslib/utility/binary_search.py
-      title: byslib/utility/binary_search.py
+      title: Binary search
     - icon: ':warning:'
       path: byslib/utility/grid.py
       title: byslib/utility/grid.py
-    - icon: ':warning:'
-      path: byslib/utility/util.py
-      title: byslib/utility/util.py
   - name: .
     pages:
     - icon: ':warning:'
       path: template.py
       title: template.py
-  - name: tests
+  - name: tests/verify_pytest
     pages:
     - icon: ':warning:'
-      path: tests/__init__.py
-      title: tests/__init__.py
-    - icon: ':warning:'
-      path: tests/test_io.py
-      title: tests/test_io.py
+      path: tests/verify_pytest/exec_pytest.py
+      title: tests/verify_pytest/exec_pytest.py
   verificationCategories:
-  - name: tests
+  - name: tests/core
     pages:
     - icon: ':heavy_check_mark:'
-      path: tests/binary_indexed_tree.test.py
-      title: tests/binary_indexed_tree.test.py
-    - icon: ':heavy_check_mark:'
-      path: tests/cumulative_sum.test.py
-      title: tests/cumulative_sum.test.py
-    - icon: ':heavy_check_mark:'
-      path: tests/dijkstra.test.py
-      title: tests/dijkstra.test.py
-    - icon: ':heavy_check_mark:'
-      path: tests/io.test.py
-      title: tests/io.test.py
-    - icon: ':heavy_check_mark:'
-      path: tests/kruskal.test.py
-      title: tests/kruskal.test.py
-    - icon: ':heavy_check_mark:'
-      path: tests/mod_comb.test.py
-      title: tests/mod_comb.test.py
-    - icon: ':heavy_check_mark:'
-      path: tests/segment_tree.test.py
-      title: tests/segment_tree.test.py
-    - icon: ':heavy_check_mark:'
-      path: tests/union_find.test.py
-      title: tests/union_find.test.py
-  - name: tests/lazysegtree
+      path: tests/core/io.test.py
+      title: tests/core/io.test.py
+  - name: tests/data
     pages:
     - icon: ':heavy_check_mark:'
-      path: tests/lazysegtree/range_update_query.test.py
-      title: tests/lazysegtree/range_update_query.test.py
+      path: tests/data/binary_indexed_tree.test.py
+      title: tests/data/binary_indexed_tree.test.py
+    - icon: ':heavy_check_mark:'
+      path: tests/data/cumulative_sum.test.py
+      title: tests/data/cumulative_sum.test.py
+    - icon: ':heavy_check_mark:'
+      path: tests/data/segment_tree.test.py
+      title: tests/data/segment_tree.test.py
+    - icon: ':heavy_check_mark:'
+      path: tests/data/union_find.test.py
+      title: tests/data/union_find.test.py
+  - name: tests/data/lazysegtree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/data/lazysegtree/range_update_query.test.py
+      title: tests/data/lazysegtree/range_update_query.test.py
+  - name: tests/graph
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/dijkstra.test.py
+      title: tests/graph/dijkstra.test.py
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/kruskal.test.py
+      title: tests/graph/kruskal.test.py
+  - name: tests/numeric
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/numeric/mod_comb.test.py
+      title: tests/numeric/mod_comb.test.py
+  - name: tests/verify_pytest
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/verify_pytest/test_io.test.py
+      title: tests/verify_pytest/test_io.test.py
 layout: toppage
 ---
 [![Badge](https://cp-logo.vercel.app/atcoder/bayashi_cl)](https://atcoder.jp/users/bayashi_cl)
