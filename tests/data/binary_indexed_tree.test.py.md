@@ -39,11 +39,11 @@ data:
     \        else:\n            l, r = que\n            print(bit.fold(l, r))\n\n\n\
     if __name__ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n    main()\n"
   dependsOn:
-  - byslib/data/__init__.py
-  - byslib/data/binary_indexed_tree.py
   - byslib/__init__.py
-  - byslib/core/fastio.py
+  - byslib/data/binary_indexed_tree.py
+  - byslib/data/__init__.py
   - byslib/core/__init__.py
+  - byslib/core/fastio.py
   isVerificationFile: true
   path: tests/data/binary_indexed_tree.test.py
   requiredBy: []

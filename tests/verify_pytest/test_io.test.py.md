@@ -29,8 +29,8 @@ data:
     5\") == 4\n\n\nif __name__ == \"__main__\":\n    import sys\n\n    from exec_pytest\
     \ import exec_pytest\n\n    sys.exit(exec_pytest(__file__))\n"
   dependsOn:
-  - byslib/core/fastio.py
   - byslib/__init__.py
+  - byslib/core/fastio.py
   - byslib/core/__init__.py
   isVerificationFile: true
   path: tests/verify_pytest/test_io.test.py

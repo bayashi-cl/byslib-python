@@ -57,16 +57,16 @@ data:
     \            print(path[i], path[i + 1])\n\n\nif __name__ == \"__main__\":\n \
     \   main()\n"
   dependsOn:
+  - byslib/__init__.py
   - byslib/graph/depth_first_search.py
   - byslib/graph/utility.py
   - byslib/graph/dijkstra.py
-  - byslib/core/const.py
-  - byslib/__init__.py
   - byslib/graph/edge.py
-  - byslib/core/fastio.py
-  - byslib/graph/__init__.py
+  - byslib/core/const.py
   - byslib/graph/graph.py
   - byslib/core/__init__.py
+  - byslib/core/fastio.py
+  - byslib/graph/__init__.py
   isVerificationFile: true
   path: tests/graph/dijkstra.test.py
   requiredBy: []

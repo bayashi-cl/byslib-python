@@ -38,11 +38,11 @@ data:
     \ r))\n\n\nif __name__ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n  \
     \  main()\n"
   dependsOn:
+  - byslib/__init__.py
   - byslib/data/__init__.py
   - byslib/data/cumulative_sum.py
-  - byslib/__init__.py
-  - byslib/core/fastio.py
   - byslib/core/__init__.py
+  - byslib/core/fastio.py
   isVerificationFile: true
   path: tests/data/cumulative_sum.test.py
   requiredBy: []

@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/verify_pytest/test_numeric.test.py
+    title: tests/verify_pytest/test_numeric.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Divisor
     links:
@@ -39,8 +42,9 @@ data:
   path: byslib/numeric/divisor.py
   requiredBy: []
   timestamp: '2022-04-18 22:29:22+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/verify_pytest/test_numeric.test.py
 documentation_of: byslib/numeric/divisor.py
 layout: document
 redirect_from:

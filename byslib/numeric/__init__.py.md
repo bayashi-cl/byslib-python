@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/numeric/mod_comb.test.py
     title: tests/numeric/mod_comb.test.py
+  - icon: ':heavy_check_mark:'
+    path: tests/verify_pytest/test_numeric.test.py
+    title: tests/verify_pytest/test_numeric.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -24,6 +27,7 @@ data:
   timestamp: '2022-03-25 15:36:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/verify_pytest/test_numeric.test.py
   - tests/numeric/mod_comb.test.py
 documentation_of: byslib/numeric/__init__.py
 layout: document

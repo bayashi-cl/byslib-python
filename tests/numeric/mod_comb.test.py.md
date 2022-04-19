@@ -44,12 +44,12 @@ data:
     \ ValueError\n\n\nif __name__ == \"__main__\":\n    t = 1\n    # t = int(readline())\n\
     \    main(t)\n"
   dependsOn:
-  - byslib/numeric/mod_comb.py
-  - byslib/core/config.py
   - byslib/__init__.py
-  - byslib/core/fastio.py
+  - byslib/core/config.py
   - byslib/numeric/__init__.py
+  - byslib/numeric/mod_comb.py
   - byslib/core/__init__.py
+  - byslib/core/fastio.py
   isVerificationFile: true
   path: tests/numeric/mod_comb.test.py
   requiredBy: []

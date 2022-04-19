@@ -85,10 +85,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: byslib/numeric/__init__.py
       title: byslib/numeric/__init__.py
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: byslib/numeric/divisor.py
       title: Divisor
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: byslib/numeric/euclid.py
       title: Euclid
     - icon: ':warning:'
@@ -170,6 +170,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/verify_pytest/test_io.test.py
       title: tests/verify_pytest/test_io.test.py
+    - icon: ':heavy_check_mark:'
+      path: tests/verify_pytest/test_numeric.test.py
+      title: tests/verify_pytest/test_numeric.test.py
 layout: toppage
 ---
 [![Badge](https://cp-logo.vercel.app/atcoder/bayashi_cl)](https://atcoder.jp/users/bayashi_cl)

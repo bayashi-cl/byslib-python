@@ -49,15 +49,15 @@ data:
     \ for _ in range(e)]\n    cost, _ = kruskal(edges, v)\n    print(cost)\n\n\nif\
     \ __name__ == \"__main__\":\n    sys.setrecursionlimit(10**6)\n    main()\n"
   dependsOn:
-  - byslib/data/__init__.py
-  - byslib/graph/kruskal.py
   - byslib/__init__.py
   - byslib/graph/edge.py
-  - byslib/core/fastio.py
-  - byslib/graph/__init__.py
+  - byslib/data/__init__.py
   - byslib/graph/graph.py
   - byslib/data/union_find.py
   - byslib/core/__init__.py
+  - byslib/core/fastio.py
+  - byslib/graph/__init__.py
+  - byslib/graph/kruskal.py
   isVerificationFile: true
   path: tests/graph/kruskal.test.py
   requiredBy: []

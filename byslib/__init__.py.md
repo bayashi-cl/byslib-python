@@ -36,6 +36,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/verify_pytest/test_io.test.py
     title: tests/verify_pytest/test_io.test.py
+  - icon: ':heavy_check_mark:'
+    path: tests/verify_pytest/test_numeric.test.py
+    title: tests/verify_pytest/test_numeric.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -59,6 +62,7 @@ data:
   timestamp: '2022-04-18 22:29:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/verify_pytest/test_numeric.test.py
   - tests/verify_pytest/test_io.test.py
   - tests/graph/dijkstra.test.py
   - tests/graph/kruskal.test.py
