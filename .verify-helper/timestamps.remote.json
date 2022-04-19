@@ -8,5 +8,6 @@
 "tests/graph/dijkstra.test.py": "2022-04-18 22:29:22 +0900",
 "tests/graph/kruskal.test.py": "2022-04-18 22:29:22 +0900",
 "tests/numeric/mod_comb.test.py": "2022-04-18 22:29:22 +0900",
-"tests/verify_pytest/test_io.test.py": "2022-04-18 22:29:22 +0900"
+"tests/verify_pytest/test_io.test.py": "2022-04-18 22:29:22 +0900",
+"tests/verify_pytest/test_numeric.test.py": "2022-04-19 13:16:57 +0900"
 }
